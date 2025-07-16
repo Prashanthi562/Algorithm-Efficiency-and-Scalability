@@ -1,1 +1,12 @@
 # Algorithm-Efficiency-and-Scalability
+
+## Project Overview
+Two canonical computer science algorithms, including Randomized Quicksort and Hash Table with Chaining, have been tested in the current study with the consideration of their scalability and efficiency under heterogeneous inputs and workloads scenarios. Randomized Quicksort uses stochastic pivot selection, which discourages worst-case performance behavior, and Hash Table with Chaining, which uses linked-list reversals to handle collision situations, maintains consistent performance times with high-load factors. The result indicates that both approaches bear well under a broad range of operating environments, the difference being that the reimbursement approaches focus differently.
+
+## Execution Instructions
+Both of these implementations are based on Python 3 and do not use any external libraries other than the built-in random module. The Randomized Quicksort script is found in the likewise-named subdirectory and can be run through the Python translator. Similarly, it is possible to run the Hash Table script by going to its subdirectory and entering the Python command. Both the implementations have embedded test cases validating functionality across a wide variety of inputs.
+
+## Implementation Summary
+Randomized Quicksort also chooses a pivot element randomly among all elements in the current sub-array, and partitions the array against that element. Because of this randomized choice, ill-chosen pivots are no longer used repeatedly, and the average partitions henceforth remain balanced. Similar logic is recursively used to split the same way upon separately having the corresponding left as well as the right Sub-arrays. The method is robust across diverse input conditions, including empty arrays, single-element arrays, sorted arrays, reverse-sorted arrays, and arrays with duplicates, while maintaining an average-case time complexity of O(n log n).
+
+The Hash Table and Chaining cover the major collision by allotting linked list in each table index. Each of these lists stores all pairs key-value that hash to that specific index. Insertion, search, deletion, and basic operations are carried out by traversing these chains. In order to maintain quick access even with a high number of stored objects, the hash table will keep check of the load factor and recreate the table by doubling its size when the load exceeds a particular predetermined value. All current data are re-entered in the new table that is of a different size to guarantee more similar distribution.
